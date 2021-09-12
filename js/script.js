@@ -114,7 +114,8 @@ function buildAndShowHomeHTML (categories) {
       // $dc.loadMenuItems('L')
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
-    
+
+      chosenCategoryShortName= "'"+chosenCategoryShortName+"'";   //NEW
       var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,'randomCategoryShortName', chosenCategoryShortName);
 
 
@@ -123,7 +124,7 @@ function buildAndShowHomeHTML (categories) {
       // of how to do that.
       // ....
       
-      insertHtml("#main-content", homeHtmlToInsertIntoMainPage)
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
 
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
